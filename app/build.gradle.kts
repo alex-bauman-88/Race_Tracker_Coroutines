@@ -17,6 +17,8 @@ plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
     id("org.jetbrains.kotlin.plugin.compose")
+    id("com.google.gms.google-services")
+    id("com.google.firebase.crashlytics")
 }
 
 android {
@@ -73,6 +75,7 @@ dependencies {
     implementation("androidx.core:core-ktx:1.15.0")
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:${rootProject.extra["lifecycle_version"]}")
     implementation("androidx.lifecycle:lifecycle-viewmodel-compose:${rootProject.extra["lifecycle_version"]}")
+    implementation("com.google.firebase:firebase-crashlytics:19.4.0")
 
     androidTestImplementation(platform("androidx.compose:compose-bom:2024.12.01"))
     androidTestImplementation("androidx.compose.ui:ui-test-junit4")
@@ -82,4 +85,16 @@ dependencies {
 
     debugImplementation("androidx.compose.ui:ui-test-manifest")
     debugImplementation("androidx.compose.ui:ui-tooling")
+
+    testImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.6.4")
+
+//    // Optional -- Mockito framework
+//    testImplementation ("org.mockito:mockito-core:2.25.0")
+    // Optional -- mockito-kotlin
+//    testImplementation ("org.mockito.kotlin:mockito-kotlin:4.1.0")
+
+    testImplementation ("io.mockk:mockk:1.13.16")
+    androidTestImplementation ("io.mockk:mockk-android:1.13.16")
+
+
 }

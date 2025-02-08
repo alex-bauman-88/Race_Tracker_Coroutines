@@ -25,6 +25,7 @@ import androidx.compose.ui.Modifier
 import com.example.racetracker.ui.RaceTrackerApp
 import com.example.racetracker.ui.theme.RaceTrackerTheme
 
+
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         enableEdgeToEdge()
